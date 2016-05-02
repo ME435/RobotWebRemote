@@ -30,8 +30,13 @@ System.register(['angular2/core', 'angular2/router', './route-config', "angularf
             RobotWebRemoteApp = (function () {
                 // TODO: add commands and params
                 function RobotWebRemoteApp(af) {
+                    var _this = this;
                     this.af = af;
-                    this.monitor = af.object("/monitor");
+                    this.monitorStream = af.object("/elmo/monitor");
+                    this.monitorStream.subscribe(function (monitor) {
+                        _this.monitor = monitor;
+                        console.log(monitor);
+                    });
                 }
                 RobotWebRemoteApp = __decorate([
                     core_1.Component({

@@ -1,15 +1,15 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: 8b20b3db861c413128f0c1e6d183fe86296e6d58
+# sw.version: b6ff30394fec5f3cc629245846798b1dec7a6f77
 # sw.file.hash: b9e3029c42dc2128a9f96e75fbd05bdb8e9e6394
 \app.js
 # sw.file.hash: 7fa234c19ae6034702b6ccab3ee5304036586a98
 \app.js.map
-# sw.file.hash: 274aeb263e796cd6e13812ab5d6c489bc6ce4dd6
+# sw.file.hash: a4e9b5a1950622d6e42117fc06916acfd2377890
 \app\robot-web-remote.html
-# sw.file.hash: a1401aec6fc78fa95709402e3a359800c978074a
+# sw.file.hash: 743defe780de6147003a83b338d3573bcc610e0e
 \app\robot-web-remote.js
-# sw.file.hash: 9f2df66c6dfa68bdebc42abc3aee56e7128a7a5f
+# sw.file.hash: 6d0ea5e0720e2dae8e5b88bb96e920b58f1045d0
 \app\robot-web-remote.js.map
 # sw.file.hash: 8777ea42c1796418d6396685ed4ffb84816a2eaa
 \app\route-config.js

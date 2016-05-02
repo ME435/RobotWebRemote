@@ -15,11 +15,18 @@ import {AngularFire, FirebaseObjectObservable} from "angularfire2/angularfire2";
 ].concat(CliRouteConfig))
 
 export class RobotWebRemoteApp {
-  monitor: FirebaseObjectObservable<any>;
+  monitorStream: FirebaseObjectObservable<any>;
+  monitor: any;
+
   // TODO: add commands and params
 
   constructor(private af: AngularFire) {
-    this.monitor = af.object("/monitor");
+    this.monitorStream = af.object("/elmo/monitor");
+    this.monitorStream.subscribe((monitor) => {
+      this.monitor = monitor;
+      console.log(monitor);
+
+    } )
   }
 
 }
