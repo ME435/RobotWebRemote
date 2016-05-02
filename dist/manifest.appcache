@@ -1,27 +1,23 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: d68b612023dda92c48b2ddfa27983d1c9d5dcf42
-# sw.file.hash: a0e5d3afb02d41cacbd34bf5921b9a62db6211b9
+# sw.version: 8b20b3db861c413128f0c1e6d183fe86296e6d58
+# sw.file.hash: b9e3029c42dc2128a9f96e75fbd05bdb8e9e6394
 \app.js
-# sw.file.hash: 5f94cb22db201ccffa1700a1fb95bf0cde322c18
+# sw.file.hash: 7fa234c19ae6034702b6ccab3ee5304036586a98
 \app.js.map
-# sw.file.hash: 3484a15c2b20b763f4964b31fe924db5a6ddea97
+# sw.file.hash: 274aeb263e796cd6e13812ab5d6c489bc6ce4dd6
 \app\robot-web-remote.html
-# sw.file.hash: b04c68b646d261b08a4f355b35b4d9404884cf6d
+# sw.file.hash: a1401aec6fc78fa95709402e3a359800c978074a
 \app\robot-web-remote.js
-# sw.file.hash: 89650871fc746880aaae9aca2ecebc8216e945ad
+# sw.file.hash: 9f2df66c6dfa68bdebc42abc3aee56e7128a7a5f
 \app\robot-web-remote.js.map
-# sw.file.hash: fec2468ee6f215965355584b007da9ee0a99427f
-\app\robot-web-remote.spec.js
-# sw.file.hash: 082dddf73bb440d4e8110895c90ba7dd4d86e927
-\app\robot-web-remote.spec.js.map
 # sw.file.hash: 8777ea42c1796418d6396685ed4ffb84816a2eaa
 \app\route-config.js
 # sw.file.hash: 60979311b6b0dddd178d86ac87e1a24dac1e56cb
 \app\route-config.js.map
 # sw.file.hash: 84161b857f5c547e3699ddfbffc6d8d737542e01
 \favicon.ico
-# sw.file.hash: 7418791e3bf609a3c98758792df9bd04b16facb2
+# sw.file.hash: 980fd812491c4eec6ca45eaee6195b83cb1cca4c
 \index.html
 # sw.file.hash: a8b81f81281cb6b684384df2454ee0aab1105d6a
 \tsconfig.json

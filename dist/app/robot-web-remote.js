@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './route-config'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './route-config', "angularfire2/angularfire2"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', './route-config'], function
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, route_config_1;
+    var core_1, router_1, route_config_1, angularfire2_1;
     var RobotWebRemoteApp;
     return {
         setters:[
@@ -22,15 +22,17 @@ System.register(['angular2/core', 'angular2/router', './route-config'], function
             },
             function (route_config_1_1) {
                 route_config_1 = route_config_1_1;
+            },
+            function (angularfire2_1_1) {
+                angularfire2_1 = angularfire2_1_1;
             }],
         execute: function() {
             RobotWebRemoteApp = (function () {
-                function RobotWebRemoteApp() {
-                    this.defaultMeaning = 42;
+                // TODO: add commands and params
+                function RobotWebRemoteApp(af) {
+                    this.af = af;
+                    this.monitor = af.object("/monitor");
                 }
-                RobotWebRemoteApp.prototype.meaningOfLife = function (meaning) {
-                    return "The meaning of life is " + (meaning || this.defaultMeaning);
-                };
                 RobotWebRemoteApp = __decorate([
                     core_1.Component({
                         selector: 'robot-web-remote-app',
@@ -40,7 +42,7 @@ System.register(['angular2/core', 'angular2/router', './route-config'], function
                         pipes: []
                     }),
                     router_1.RouteConfig([].concat(route_config_1.CliRouteConfig)), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [angularfire2_1.AngularFire])
                 ], RobotWebRemoteApp);
                 return RobotWebRemoteApp;
             }());
