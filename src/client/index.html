@@ -6,7 +6,8 @@
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+  <link rel="stylesheet" href="styles/styles.css">
+
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
@@ -36,7 +37,8 @@
     System.config({
       map: {
         firebase: 'vendor/firebase/lib/firebase-web.js',
-        angularfire2: 'vendor/angularfire2'
+        angularfire2: 'vendor/angularfire2',
+        "@angular2-material": 'vendor/@angular2-material',
       },
       packages: {
         app: {
@@ -46,7 +48,33 @@
         angularfire2: {
           defaultExtension: 'js',
           main: 'angularfire2.js'
-        }
+        },
+        '@angular2-material/core': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'core.js'
+        },
+        '@angular2-material/checkbox': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'checkbox.js'
+        },
+        '@angular2-material/card': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'card.js'
+        },
+        '@angular2-material/button': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'button.js'
+        },
+        '@angular2-material/input': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'input.js'
+        },
+
       }
     });
     System.import('app.js').then(null, console.error.bind(console));

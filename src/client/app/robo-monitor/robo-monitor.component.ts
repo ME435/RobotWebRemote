@@ -1,10 +1,13 @@
 import {Component, OnInit} from 'angular2/core';
 import {AngularFire} from "angularfire2/angularfire2";
+import {MD_CARD_DIRECTIVES} from "@angular2-material/card";
+import {MdButton} from "@angular2-material/button";
 
 @Component({
   selector: 'robo-monitor',
   templateUrl: 'app/robo-monitor/robo-monitor.component.html',
-  styleUrls: ['app/robo-monitor/robo-monitor.component.css']
+  styleUrls: ['app/robo-monitor/robo-monitor.component.css'],
+  directives: [MD_CARD_DIRECTIVES, MdButton],
 })
 export class RoboMonitorComponent implements OnInit {
 

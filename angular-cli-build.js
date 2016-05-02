@@ -7,6 +7,7 @@ module.exports = function(defaults) {
     vendorNpmFiles: [
       'angularfire2/**/*.js',
       'firebase/lib/*.js',
+      '@angular2-material/**/*.js',
     ]
   });
   return app.toTree();

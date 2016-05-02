@@ -8,6 +8,7 @@ import {RoboMonitorComponent} from "./robo-monitor/robo-monitor.component";
   selector: 'robot-web-remote-app',
   providers: [ROUTER_PROVIDERS],
   templateUrl: 'app/robot-web-remote.html',
+  styleUrls: ["app/robot-web-remote.html"],
   directives: [ROUTER_DIRECTIVES, RoboMonitorComponent],
   pipes: []
 })
