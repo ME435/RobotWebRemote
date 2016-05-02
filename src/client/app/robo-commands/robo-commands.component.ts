@@ -1,6 +1,8 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Inject} from 'angular2/core';
 import {MD_CARD_DIRECTIVES} from "@angular2-material/card";
 import {MdButton} from "@angular2-material/button";
+import {AngularFire} from "angularfire2/angularfire2";
+import {FirebaseRef} from "angularfire2/tokens";
 
 @Component({
   selector: 'robo-commands',
@@ -10,8 +12,13 @@ import {MdButton} from "@angular2-material/button";
 })
 export class RoboCommandsComponent implements OnInit {
 
-  constructor() {}
-  
+  commandsRef: Firebase;
+
+  constructor(@Inject(FirebaseRef) ref: Firebase) {
+    // TODO: DOn't hardcode robot name
+    this.commandsRef = ref.child("elmo/commands");
+
+  }
   ngOnInit() {
   }
 
