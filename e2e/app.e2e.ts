@@ -9,6 +9,6 @@ describe('robot-web-remote App', function() {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('robot-web-remote Works!');
+    expect(page.getParagraphText()).toEqual('robot-web-remote works!');
   });
 });

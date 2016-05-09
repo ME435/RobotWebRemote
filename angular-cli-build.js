@@ -3,12 +3,18 @@
 var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 
 module.exports = function(defaults) {
-  var app = new Angular2App(defaults, {
+  return new Angular2App(defaults, {
     vendorNpmFiles: [
-      'angularfire2/**/*.js',
+      'systemjs/dist/system-polyfills.js',
+      'systemjs/dist/system.src.js',
+      'zone.js/dist/*.js',
+      'es6-shim/es6-shim.js',
+      'reflect-metadata/*.js',
+      'rxjs/**/*.js',
+      '@angular/**/*.js',
+	    'angularfire2/**/*.js',
       'firebase/lib/*.js',
       '@angular2-material/**/*.js',
     ]
   });
-  return app.toTree();
 };

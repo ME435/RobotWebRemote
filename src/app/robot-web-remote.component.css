@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+
+robo-monitor, robo-commands {
+  flex-grow: 1;
+  margin: 0 16px 16px 0;
+}

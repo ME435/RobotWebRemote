@@ -4,6 +4,6 @@ export class RobotWebRemotePage {
   }
 
   getParagraphText() {
-    return element(by.css('robot-web-remote-app p')).getText();
+    return element(by.css('robot-web-remote-app h1')).getText();
   }
 }
