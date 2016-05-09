@@ -6,6 +6,11 @@ import {RoboCommandsComponent} from "./robo-commands/robo-commands.component";
 import {MD_SIDENAV_DIRECTIVES} from "@angular2-material/sidenav/sidenav";
 import {ManualDriveComponent} from "./manual-drive/manual-drive.component";
 import {TestingWithControlsComponent} from "./testing-with-controls/testing-with-controls.component";
+import {MdButton} from "@angular2-material/button/button";
+import {CompetitionControllerComponent} from "./competition-controller/competition-controller.component";
+import {ObserveOnlyComponent} from "./observe-only/observe-only.component";
+import {RobotParamsComponent} from "./robot-params/robot-params.component";
+import {SetFirebasePathComponent} from "./set-firebase-path/set-firebase-path.component";
 
 @Component({
   moduleId: module.id,
@@ -13,12 +18,17 @@ import {TestingWithControlsComponent} from "./testing-with-controls/testing-with
   selector: 'robot-web-remote-app',
   templateUrl: 'robot-web-remote.component.html',
   styleUrls: ['robot-web-remote.component.css'],
-  directives: [ROUTER_DIRECTIVES, RoboCommandsComponent, RoboMonitorComponent, MD_SIDENAV_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, RoboCommandsComponent, RoboMonitorComponent, MD_SIDENAV_DIRECTIVES, MdButton],
   pipes: []
 })
 @RouteConfig([
+  {path: '/', name: "Root", redirectTo: ["/SetFirebasePath"]},
+  {path: '/path', name: "SetFirebasePath", component: SetFirebasePathComponent},
+  {path: '/observe', name: "ObserveOnly", component: ObserveOnlyComponent},
   {path: '/manualdrive', name: "ManualDrive", component: ManualDriveComponent},
   {path: '/testing', name: "TestingWithControls", component: TestingWithControlsComponent},
+  {path: '/competition', name: "CompetitionController", component: CompetitionControllerComponent},
+  {path: '/params', name: "RobotParams", component:RobotParamsComponent},
 ])
 export class RobotWebRemoteAppComponent {
   title = 'robot-web-remote works!';

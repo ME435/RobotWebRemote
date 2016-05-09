@@ -1,18 +1,20 @@
 <h1>Firebase Web Remote</h1>
 
 <!--<md-sidenav-layout>-->
-  <!--<md-sidenav>-->
-    <!--Side nav 1-->
-  <!--</md-sidenav>-->
   <!--<md-sidenav-container>-->
-    <!--Side nav wonder!-->
+    <!--<md-sidenav align="end" open=true mode="side">-->
+      <button md-button [routerLink]="['SetFirebasePath']">Set Firebase Path</button>
+      <button md-button [routerLink]="['ObserveOnly']">Observe Only</button>
+      <button md-button [routerLink]="['ManualDrive']">Manual Drive</button>
+      <button md-button [routerLink]="['TestingWithControls']">Testing with Controls</button>
+      <button md-button [routerLink]="['CompetitionController']">Competition Controller</button>
+      <button md-button [routerLink]="['RobotParams']">Robot Params</button>
+    <!--</md-sidenav>-->
+    <router-outlet></router-outlet>
   <!--</md-sidenav-container>-->
 <!--</md-sidenav-layout>-->
 
-<a [routerLink]="['ManualDrive']">Manual Drive</a>
-<a [routerLink]="['TestingWithControls']">Testing with Controls</a>
 
-<router-outlet></router-outlet>
 
 
 
