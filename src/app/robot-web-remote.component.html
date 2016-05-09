@@ -1,4 +1,4 @@
-Robot Name
+<h1>Firebase Web Remote</h1>
 
 <!--<md-sidenav-layout>-->
   <!--<md-sidenav>-->
@@ -9,8 +9,10 @@ Robot Name
   <!--</md-sidenav-container>-->
 <!--</md-sidenav-layout>-->
 
-<button >Path 1</button>
-<button >Path 2</button>
+<a [routerLink]="['ManualDrive']">Manual Drive</a>
+<a [routerLink]="['TestingWithControls']">Testing with Controls</a>
+
+<router-outlet></router-outlet>
 
 
 
