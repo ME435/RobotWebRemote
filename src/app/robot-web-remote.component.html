@@ -1,27 +1,22 @@
-<h1>Firebase Web Remote</h1>
-
-<!--<md-sidenav-layout>-->
-  <!--<md-sidenav-container>-->
-    <!--<md-sidenav align="end" open=true mode="side">-->
-      <button md-button [routerLink]="['SetFirebasePath']">Path</button>
-      <button md-button [routerLink]="['ObserveOnly']">Observe</button>
-      <button md-button [routerLink]="['ManualDrive']">Drive</button>
-      <button md-button [routerLink]="['TestingWithControls']">Test</button>
-      <button md-button [routerLink]="['CompetitionController']">Competition</button>
-      <button md-button [routerLink]="['RobotParams']">Params</button>
-    <!--</md-sidenav>-->
-    <hr>
+<md-sidenav-layout>
+  <md-sidenav #sidenav>
+    <div class="nav-header">
+      Rose-Logo here
+    </div>
+    <div class="sidenav-content">
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['SetFirebasePath']">Set Firebase Path</button>
+      <div class="sidenav-category">For Anyone</div>
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['ObserveOnly']">Observe Robot</button>
+      <div class="sidenav-category">Robot Team Only</div>
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['ManualDrive']">Manual Drive</button>
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['TestingWithControls']">Testing</button>
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['CompetitionController']">Competition</button>
+      <button md-raised-button (click)="sidenav.close()" [routerLink]="['RobotParams']">Params</button>
+    </div>
+  </md-sidenav>
+  <button md-raised-button (click)="sidenav.open()">Open</button>
+  <span >Firebase Web Remote</span>
+  <div class="remote-container">
     <router-outlet></router-outlet>
-  <!--</md-sidenav-container>-->
-<!--</md-sidenav-layout>-->
-
-
-
-
-
-<!--<div class="card-container">-->
-  <!--<robo-commands></robo-commands>-->
-  <!--<robo-monitor></robo-monitor>-->
-<!--</div>-->
-
-<!--<router-outlet></router-outlet>-->
+  </div>
+</md-sidenav-layout>

@@ -1,12 +1,19 @@
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-flow: row wrap;
+.sidenav-content {
+  padding: 0 10px;
 }
 
-robo-monitor, robo-commands {
-  flex-grow: 1;
-  margin: 0 16px 16px 0;
+.nav-header {
+  height: 100px;
+  background: #800;
+  color: white;
 }
 
+md-sidenav button {
+  display: block;
+  margin: 10px;
+  width: 150px;
+}
+
+.remote-container {
+  min-height: 500px;
+}
