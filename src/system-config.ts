@@ -44,6 +44,11 @@ const packages: any = {
     defaultExtension: 'js',
     main: 'sidenav.js'
   },
+  '@angular2-material/toolbar': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'toolbar.js'
+  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

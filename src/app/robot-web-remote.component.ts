@@ -4,6 +4,7 @@ import {MD_SIDENAV_DIRECTIVES} from "@angular2-material/sidenav/sidenav";
 import {ManualDriveComponent} from "./manual-drive/manual-drive.component";
 import {TestingWithControlsComponent} from "./testing-with-controls/testing-with-controls.component";
 import {MdButton} from "@angular2-material/button/button";
+import {MdToolbar} from "@angular2-material/toolbar/toolbar";
 import {CompetitionControllerComponent} from "./competition-controller/competition-controller.component";
 import {ObserveOnlyComponent} from "./observe-only/observe-only.component";
 import {RobotParamsComponent} from "./robot-params/robot-params.component";
@@ -15,7 +16,7 @@ import {SetFirebasePathComponent} from "./set-firebase-path/set-firebase-path.co
   selector: 'robot-web-remote-app',
   templateUrl: 'robot-web-remote.component.html',
   styleUrls: ['robot-web-remote.component.css'],
-  directives: [ROUTER_DIRECTIVES, MD_SIDENAV_DIRECTIVES, MdButton],
+  directives: [ROUTER_DIRECTIVES, MD_SIDENAV_DIRECTIVES, MdButton, MdToolbar],
   pipes: []
 })
 @RouteConfig([

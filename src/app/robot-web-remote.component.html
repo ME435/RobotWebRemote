@@ -18,8 +18,12 @@
       <button md-raised-button (click)="sidenav.close()" [routerLink]="['RobotParams']">Params</button>
     </div>
   </md-sidenav>
-  <button md-raised-button (click)="sidenav.open()">Open</button>
-  <span >Firebase Web Remote</span>
+
+  <md-toolbar color="warn">
+    <button md-button (click)="sidenav.open()">Open</button>
+    <span>Firebase Robot Remote</span>
+  </md-toolbar>
+
   <div class="remote-container">
     <router-outlet></router-outlet>
   </div>
