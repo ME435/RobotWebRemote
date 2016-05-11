@@ -1,19 +1,37 @@
+md-sidenav-layout {
+  height: 100%;
+}
+
 .sidenav-content {
   padding: 0 10px;
+  width: 180px;
+  margin: 15px auto;
 }
 
 .nav-header {
-  height: 100px;
+  height: 90px;
   background: #800;
   color: white;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.nav-header-subtitles {
+  font-size: 0.9em;
+  color: #ddd;
 }
 
 md-sidenav button {
   display: block;
-  margin: 10px;
-  width: 150px;
+  margin: 10px 15px;
+  width: 160px;
 }
 
 .remote-container {
-  min-height: 500px;
+  padding: 16px;
+}
+
+img {
+  width: 200px;
+  margin: 10px
 }

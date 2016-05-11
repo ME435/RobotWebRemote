@@ -1,7 +1,11 @@
 <md-sidenav-layout>
   <md-sidenav #sidenav>
     <div class="nav-header">
-      Rose-Logo here
+      <img src="images/rose_logo_w.png" alt="Rose-Hulman Logo" />
+      <div class="nav-header-subtitles">
+        ME435 / CSSE435<br>
+        Firebase Robot Remote
+      </div>
     </div>
     <div class="sidenav-content">
       <button md-raised-button (click)="sidenav.close()" [routerLink]="['SetFirebasePath']">Set Firebase Path</button>
