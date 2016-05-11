@@ -9,6 +9,7 @@ import {CompetitionControllerComponent} from "./competition-controller/competiti
 import {ObserveOnlyComponent} from "./observe-only/observe-only.component";
 import {RobotParamsComponent} from "./robot-params/robot-params.component";
 import {SetFirebasePathComponent} from "./set-firebase-path/set-firebase-path.component";
+import {MD_CARD_DIRECTIVES} from "@angular2-material/card/card";
 
 @Component({
   moduleId: module.id,
@@ -16,7 +17,7 @@ import {SetFirebasePathComponent} from "./set-firebase-path/set-firebase-path.co
   selector: 'robot-web-remote-app',
   templateUrl: 'robot-web-remote.component.html',
   styleUrls: ['robot-web-remote.component.css'],
-  directives: [ROUTER_DIRECTIVES, MD_SIDENAV_DIRECTIVES, MdButton, MdToolbar],
+  directives: [ROUTER_DIRECTIVES, MD_SIDENAV_DIRECTIVES, MD_CARD_DIRECTIVES, MdButton, MdToolbar],
   pipes: []
 })
 @RouteConfig([

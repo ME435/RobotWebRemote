@@ -28,10 +28,15 @@ md-sidenav button {
 }
 
 .remote-container {
-  padding: 16px;
+  padding: 12px;
 }
 
 img {
   width: 200px;
   margin: 10px
+}
+
+md-toolbar {
+  background: #800;
+  color: #eeeeee;
 }

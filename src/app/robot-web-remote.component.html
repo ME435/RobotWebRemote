@@ -19,12 +19,13 @@
     </div>
   </md-sidenav>
 
-  <md-toolbar color="warn">
+  <md-toolbar>
     <button md-button (click)="sidenav.open()">Open</button>
     <span>Firebase Robot Remote</span>
   </md-toolbar>
-
   <div class="remote-container">
-    <router-outlet></router-outlet>
+    <md-card>
+      <router-outlet></router-outlet>
+    </md-card>
   </div>
 </md-sidenav-layout>
