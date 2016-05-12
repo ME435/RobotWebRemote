@@ -20,12 +20,28 @@ export class SetFirebasePathComponent implements OnInit {
   }
 
   ngOnInit() {
-    // TODO: Use localstorage values if present.
+    // Attempt to update the boxes with the last saved values.
+    let firebaseUrl = this.firebaseState.getSavedFirebaseUrl();
+    let robotName = this.firebaseState.getSavedRobotName();
+    if (firebaseUrl && robotName) {
+      this.firebaseUrl = firebaseUrl;
+      this.robotName = robotName;
+      this.firebaseState.setFirebasePath(firebaseUrl, robotName, false)
+    }
   }
 
   handleSet() {
     this.firebaseState.setFirebasePath(this.firebaseUrl, this.robotName, true);
-  }
 
+    // TODO: Open the params remote and open the drawer.
+    // Figure out if there is a way to use the router programatically.
+
+
+    // Figure out if there is a better way to open the sidenav drawer.
+    let sidenav : any = window.document.querySelector("md-sidenav");
+    sidenav.classList.remove("md-sidenav-closed");
+    sidenav.classList.add("md-sidenav-opened");
+
+  }
 
 }

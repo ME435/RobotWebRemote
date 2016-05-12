@@ -12,11 +12,21 @@ export class FirebaseStateService {
   getRobotRef() {
     if (!this.robotRef) {
       // Create the robot ref using the last saved values.  Important for testing reloads!
-      let firebaseUrl = localStorage.getItem("firebaseUrl");
-      let robotName = localStorage.getItem("robotName");
-      this.setFirebasePath(firebaseUrl, robotName, false)
+      let firebaseUrl = this.getSavedFirebaseUrl();
+      let robotName = this.getSavedRobotName();
+      if (firebaseUrl && robotName) {
+        this.setFirebasePath(firebaseUrl, robotName, false)
+      }
     }
     return this.robotRef;
+  }
+
+  getSavedFirebaseUrl() : string {
+    return localStorage.getItem("firebaseUrl");
+  }
+
+  getSavedRobotName() : string {
+    return localStorage.getItem("robotName");
   }
 
   setFirebasePath(firebaseUrl: string, robotName: string, updateLocalStorage: boolean) {
