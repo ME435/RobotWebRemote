@@ -34,14 +34,11 @@ export class SetFirebasePathComponent implements OnInit {
     this.firebaseState.setFirebasePath(this.firebaseUrl, this.robotName, true);
 
     // TODO: Open the params remote and open the drawer.
-    // Figure out if there is a way to use the router programatically.
 
-
-    // Figure out if there is a better way to open the sidenav drawer.
-    let sidenav : any = window.document.querySelector("md-sidenav");
-    sidenav.classList.remove("md-sidenav-closed");
-    sidenav.classList.add("md-sidenav-opened");
-
+    // This was a disaster BTW.  Don't do it this way. :)
+    // let sidenav : any = window.document.querySelector("md-sidenav");
+    // sidenav.classList.remove("md-sidenav-closed");
+    // sidenav.classList.add("md-sidenav-opened");
   }
 
 }
