@@ -1,3 +1,16 @@
-<p>
-  robot-params works!
-</p>
+<md-card-content>
+  <md-card-title>Params</md-card-title>
+  <h2>Drive Straight</h2>
+  <p>leftDutyCycle: {{params?.driveStraight?.leftDutyCycle }}</p>
+  <p>rightDutyCycle: {{params?.driveStraight?.rightDutyCycle }}</p>
+  <h2>Image rec</h2>
+  <h4>Target</h4>
+  <p>h: {{params?.imgRec?.target?.h }}</p>
+  <p>s: {{params?.imgRec?.target?.s }}</p>
+  <p>v: {{params?.imgRec?.target?.v }}</p>
+  <h4>Range</h4>
+  <p>h: {{params?.imgRec?.range?.h }}</p>
+  <p>s: {{params?.imgRec?.range?.s }}</p>
+  <p>v: {{params?.imgRec?.range?.v }}</p>
+</md-card-content>
+

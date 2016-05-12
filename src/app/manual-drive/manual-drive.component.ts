@@ -2,6 +2,7 @@ import { Component, OnInit,  Inject} from '@angular/core';
 import {FirebaseRef} from "angularfire2/angularfire2";
 import {MdButton} from "@angular2-material/button/button";
 import {MD_CARD_DIRECTIVES} from "@angular2-material/card";
+import {FirebaseStateService} from "../firebase-state.service";
 
 @Component({
   moduleId: module.id,
@@ -14,12 +15,14 @@ export class ManualDriveComponent implements OnInit {
 
   commandsRef: Firebase;
 
-  constructor(@Inject(FirebaseRef) ref: Firebase) {
-    // TODO: DOn't hardcode robot name
-    this.commandsRef = ref.child("elmo/commands");
+  constructor(private firebaseState: FirebaseStateService) {
+    
   }
 
   ngOnInit() {
+    if (this.firebaseState.getRobotRef()) {
+      this.commandsRef = this.firebaseState.getRobotRef().child("commands");
+    }
   }
 
 }

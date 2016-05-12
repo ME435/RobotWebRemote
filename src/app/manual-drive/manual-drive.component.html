@@ -6,9 +6,9 @@
   -->
 <md-card-content>
   <md-card-title>Commands</md-card-title>
-  <p>TODO</p>
-  <p></p>
-  <button md-button (click)="commandsRef.child('freeze').set(true)">Freeze</button>
+  <button md-button (click)="commandsRef.child('sendWheelSpeed').set('255, 255')">Forward</button>
+  <button md-button (click)="commandsRef.child('sendWheelSpeed').set('0, 0')">Stop</button>
+  <button md-button (click)="commandsRef.child('sendWheelSpeed').set('-150, -150')">Reverse</button>
 
 
 </md-card-content>

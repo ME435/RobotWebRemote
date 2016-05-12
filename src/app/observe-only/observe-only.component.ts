@@ -14,7 +14,7 @@ export class ObserveOnlyComponent implements OnInit {
 
   private monitor: any;
 
-  constructor(public firebaseState: FirebaseStateService) {
+  constructor(private firebaseState: FirebaseStateService) {
 
   }
 
@@ -23,7 +23,7 @@ export class ObserveOnlyComponent implements OnInit {
 
     if (this.firebaseState.getRobotRef()) {
       this.firebaseState.getRobotRef().child("monitor").on("value", function(snapshot) {
-          console.log("Snapshot received");
+          console.log("Monitor snapshot received");
           console.log(snapshot.val());
         this_.monitor = snapshot.val();
       }, function (errorObject) {

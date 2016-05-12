@@ -16,7 +16,7 @@ export class SetFirebasePathComponent implements OnInit {
   private robotName = "elmo";
 
   constructor(public firebaseState: FirebaseStateService) {
-    
+
   }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class SetFirebasePathComponent implements OnInit {
   }
 
   handleSet() {
-    this.firebaseState.setFirebasePath(this.firebaseUrl, this.robotName);
+    this.firebaseState.setFirebasePath(this.firebaseUrl, this.robotName, true);
   }
 
 
