@@ -10,10 +10,11 @@ import {ObserveOnlyComponent} from "./observe-only/observe-only.component";
 import {RobotParamsComponent} from "./robot-params/robot-params.component";
 import {SetFirebasePathComponent} from "./set-firebase-path/set-firebase-path.component";
 import {MD_CARD_DIRECTIVES} from "@angular2-material/card/card";
+import {FirebaseStateService} from "./firebase-state.service";
 
 @Component({
   moduleId: module.id,
-  providers: [ROUTER_PROVIDERS],
+  providers: [ROUTER_PROVIDERS, FirebaseStateService],
   selector: 'robot-web-remote-app',
   templateUrl: 'robot-web-remote.component.html',
   styleUrls: ['robot-web-remote.component.css'],
