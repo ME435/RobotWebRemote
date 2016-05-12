@@ -1,1 +1,7 @@
-
+<p>https://{{firebaseUrl}}.firebaseio.com/{{robotName}}</p>
+<md-input placeholder="Firebase Url"
+          [(ngModel)]="firebaseUrl">
+</md-input>
+<md-input placeholder="Robot Name" [(ngModel)]="robotName"></md-input>
+<button md-raised-button (click)="handleSet()">Set</button>
+<div class="clearfix"></div>

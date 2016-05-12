@@ -1,0 +1,23 @@
+md-input {
+  display: block;
+  margin-bottom: 40px;
+}
+
+button {
+  float: right;
+  background: #737364;
+  font-size: 1.2em;
+  color: #eee;
+}
+
+.clearfix {
+  clear: both;
+}
+
+p {
+  text-align: center;
+  font-size: 0.75em;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 40px;
+}
