@@ -78,6 +78,7 @@ const barrels: string[] = [
   'app/robot-params',
   'app/set-firebase-path',
   'app/testing-with-controls',
+  'app/robot-sidenav-content',
   /** @cli-barrel */
 ];
 

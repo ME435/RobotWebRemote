@@ -1,0 +1,35 @@
+  <div class="nav-header">
+    <img src="images/rose_logo_w.png" alt="Rose-Hulman Logo" />
+    <div class="nav-header-subtitles">
+      ME435 / CSSE435<br>
+      Firebase Robot Remote
+    </div>
+  </div>
+  <div class="sidenav-content">
+    <button md-button (click)="navigateTo('SetFirebasePath')">
+      <i class="fa fa-wrench" aria-hidden="true"></i>
+      <span class="sidenav-item">Set Firebase Path</span>
+    </button>
+    <div class="sidenav-category">For Anyone</div>
+    <button md-button (click)="navigateTo('ObserveOnly')">
+      <i class="fa fa-binoculars" aria-hidden="true"></i>
+      <span class="sidenav-item">Observe Robot</span>
+    </button>
+    <div class="sidenav-category">Robot Team Only</div>
+    <button md-button (click)="navigateTo('ManualDrive')">
+      <i class="fa fa-road" aria-hidden="true"></i>
+      <span class="sidenav-item">Manual Drive</span>
+    </button>
+    <button md-button (click)="navigateTo('TestingWithControls')">
+      <i class="fa fa-tachometer" aria-hidden="true"></i>
+      <span class="sidenav-item">Testing</span>
+    </button>
+    <button md-button (click)="navigateTo('CompetitionController')">
+      <i class="fa fa-car" aria-hidden="true"></i>
+      <span class="sidenav-item">Competition</span>
+    </button>
+    <button md-button (click)="navigateTo('RobotParams')">
+      <i class="fa fa-database" aria-hidden="true"></i>
+      <span class="sidenav-item">Params</span>
+    </button>
+  </div>

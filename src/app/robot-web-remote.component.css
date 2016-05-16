@@ -2,36 +2,8 @@ md-sidenav-layout {
   height: 100%;
 }
 
-.sidenav-content {
-  padding: 0 10px;
-  width: 180px;
-}
-
-.nav-header {
-  height: 90px;
-  background: #800;
-  color: white;
-  padding: 10px;
-  margin-bottom: 8px;
-}
-
-.nav-header-subtitles {
-  font-size: 0.9em;
-  color: #ddd;
-}
-
-md-sidenav button {
-  display: block;
-  margin: 10px 15px;
-}
-
 .remote-container {
   padding: 12px;
-}
-
-img {
-  width: 200px;
-  margin: 10px
 }
 
 md-toolbar {
@@ -50,18 +22,4 @@ md-toolbar button {
   bottom: 1px;
   position: relative;
   font-size: 22px;
-}
-
-.sidenav-content .fa {
-  margin-right: 8px;
-  width: 16px;
-}
-
-.sidenav-category {
-  color: #888;
-  font-size: 0.9em;
-}
-
-.sidenav-item {
-  color: #222;
 }
