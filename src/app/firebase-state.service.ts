@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
 export class FirebaseStateService {
 
   public robotRef : Firebase;
+  public firebaseUrlChangeEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
 
@@ -31,11 +32,12 @@ export class FirebaseStateService {
 
   setFirebasePath(firebaseUrl: string, robotName: string, updateLocalStorage: boolean) {
     let path = "https://" + firebaseUrl + ".firebaseio.com/" + robotName;
-    console.log("Seting the ref path to " + path);
+    console.log("Setting the ref path to " + path);
     this.robotRef = new Firebase(path);
     if (updateLocalStorage) {
       localStorage.setItem("firebaseUrl", firebaseUrl);
       localStorage.setItem("robotName", robotName);
     }
+    this.firebaseUrlChangeEmitter.emit(path);
   }
 }

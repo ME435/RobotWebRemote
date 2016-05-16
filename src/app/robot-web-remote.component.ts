@@ -15,7 +15,6 @@ import {FirebaseStateService} from "./firebase-state.service";
 import {RobotSidenavContentComponent} from "./robot-sidenav-content/robot-sidenav-content.component";
 import {ViewChild} from "@angular/core/src/metadata";
 
-
 @Component({
   moduleId: module.id,
   providers: [ROUTER_PROVIDERS, FirebaseStateService],
@@ -37,7 +36,11 @@ import {ViewChild} from "@angular/core/src/metadata";
 export class RobotWebRemoteAppComponent implements AfterViewInit {
   @ViewChild(MdSidenav) mdSidenav:MdSidenav;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, firebaseState: FirebaseStateService) {
+    firebaseState.firebaseUrlChangeEmitter.subscribe((path) => {
+      this.mdSidenav.open();
+      this.router.navigate(["RobotParams"]);
+    });
   }
 
   ngAfterViewInit() {

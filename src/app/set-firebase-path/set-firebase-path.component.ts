@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {MdInput} from "@angular2-material/input/input";
 import {MdButton} from "@angular2-material/button/button";
 import {FirebaseStateService} from "../firebase-state.service";
@@ -15,8 +15,7 @@ export class SetFirebasePathComponent implements OnInit {
   private firebaseUrl = "fisherds-robotwebremote";
   private robotName = "elmo";
 
-  constructor(public firebaseState: FirebaseStateService) {
-
+  constructor(private firebaseState: FirebaseStateService) {
   }
 
   ngOnInit() {
@@ -26,19 +25,10 @@ export class SetFirebasePathComponent implements OnInit {
     if (firebaseUrl && robotName) {
       this.firebaseUrl = firebaseUrl;
       this.robotName = robotName;
-      this.firebaseState.setFirebasePath(firebaseUrl, robotName, false)
     }
   }
 
   handleSet() {
     this.firebaseState.setFirebasePath(this.firebaseUrl, this.robotName, true);
-
-    // TODO: Open the params remote and open the drawer.
-
-    // This was a disaster BTW.  Don't do it this way. :)
-    // let sidenav : any = window.document.querySelector("md-sidenav");
-    // sidenav.classList.remove("md-sidenav-closed");
-    // sidenav.classList.add("md-sidenav-opened");
   }
-
 }
