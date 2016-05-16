@@ -1,11 +1,40 @@
 <md-card-content>
   <md-card-title>Monitor</md-card-title>
-  <p>x: {{monitor?.gps?.x }}</p>
-  <p>y: {{monitor?.gps?.y }}</p>
-  <p>GPS heading: {{monitor?.gps?.gpsHeading }}</p>
-  <p>heading count: {{monitor?.gps?.headingCount }}</p>
-  <p>count: {{monitor?.gps?.totalCount }}</p>
+  <div class="row">
+    <div class="label">Current state:</div>
+    <div class="value">{{monitor?.state}}</div>
+  </div>
+
+  <div class="row">
+    <div class="label">State time:</div>
+    <div class="value">{{monitor?.time?.stateTimeMs/1000}}</div>
+  </div>
+  <div class="row">
+    <div class="label">GPS info:</div>
+    <div class="value">{{gpsInfo}}</div>
+  </div>
+  <div class="row">
+    <div class="label">Orientation:</div>
+    <div class="value">{{orientation}}</div>
+  </div>
+  <div class="row">
+    <div class="label">Left/right:</div>
+    <div class="value">{{monitor?.imgRec?.leftRight}}</div>
+  </div>
+  <div class="row">
+    <div class="label">Top/bottom:</div>
+    <div class="value">{{monitor?.imgRec?.topBottom}}</div>
+  </div>
+  <div class="row">
+    <div class="label">Side percentage:</div>
+    <div class="value">{{monitor?.imgRec?.size}}</div>
+  </div>
+
 </md-card-content>
+
+
+
+
 
 <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
                 <!--xmlns:tools="http://schemas.android.com/tools"-->

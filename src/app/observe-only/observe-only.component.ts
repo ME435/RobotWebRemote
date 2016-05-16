@@ -13,9 +13,10 @@ import {FirebaseStateService} from "../firebase-state.service";
 export class ObserveOnlyComponent implements OnInit {
 
   private monitor: any;
+  private gpsInfo: string;
+  private orientation: string;
 
   constructor(private firebaseState: FirebaseStateService) {
-
   }
 
   ngOnInit() {
@@ -26,10 +27,16 @@ export class ObserveOnlyComponent implements OnInit {
           console.log("Monitor snapshot received");
           console.log(snapshot.val());
         this_.monitor = snapshot.val();
+        let m = this_.monitor;
+        var gpsHeading = " ?°";
+        if (m.gps.gpsHeading <= 180.0 && m.gps.gpsHeading > -180.0) {
+          gpsHeading = ` ${Math.round(m.gps.gpsHeading)}°`;
+        }
+        this_.orientation = ` ${Math.round(m.orientation.sensorHeading)}°`;
+        this_.gpsInfo = `(${m.gps.x},${m.gps.y}) ${gpsHeading} ${m.gps.headingCount}/${m.gps.totalCount}`;
       }, function (errorObject) {
         console.log("The read failed: " + errorObject.code);
       });
     }
   }
-
 }
